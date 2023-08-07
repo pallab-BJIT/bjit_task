@@ -28,14 +28,14 @@ body {
   text-align: center;
   border: 2px solid crimson;
   margin: 15px 0px;
-  /* color: white; */
   padding: 10px 15px 20px 25px;
-  transition: 1s padding, 1s background-color, 1s color;
+  transition: 1s padding, 1s background-color, 1s color, 1s border-radius;
 }
 .paragraph:hover {
   padding: 15px 20px 25px 30px;
   background-color: crimson;
   color: white;
+  border-radius: 20px;
 }
 .image {
   width: 100%;
