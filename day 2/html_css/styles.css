@@ -138,6 +138,7 @@ th {
   text-decoration: none;
   transition: 1s color;
   color: white;
+  transition: 1s color;
 }
 
 .navbar-li > a:hover {
