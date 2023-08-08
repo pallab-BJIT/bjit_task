@@ -4,11 +4,11 @@ const isEven = (num) => {
   return num % 2 === 0;
 };
 
-const func = (numbers, evenCallback) => {
+const func = (numbers, evenCallbackFunction) => {
   let evenNumber = [];
   let oddNumber = [];
   for (let i = 0; i < numbers.length; i++) {
-    evenCallback(numbers[i])
+    evenCallbackFunction(numbers[i])
       ? evenNumber.push(numbers[i])
       : oddNumber.push(numbers[i]);
   }
