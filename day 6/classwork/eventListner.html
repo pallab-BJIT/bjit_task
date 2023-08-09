@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 id="header" onmouseover="onMouseOverHandler()">
+      Our first dom manipulation.With black color
+    </h1>
+    <p id="id"></p>
+
+    <button id="btn" onclick="btnClickHandler()">Click Me!</button>
+    <script>
+      const headerElement = document.getElementById("header");
+      const originalTextOfHeaderElement = headerElement.innerText;
+      const btnElement = document.getElementById("btn");
+
+      const btnClickHandler = () => {
+        console.log("On click handler");
+        headerElement.style.color = "red";
+        headerElement.innerText = originalTextOfHeaderElement;
+      };
+
+      const onMouseOverHandler = () => {
+        headerElement.style.color = "blue";
+        headerElement.innerText = "The color is blue";
+      };
+    </script>
+  </body>
+</html>

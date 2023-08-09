@@ -1,0 +1,7 @@
+.header {
+  color: green;
+  font-size: 50px;
+  border: 1px solid black;
+  padding: 20px;
+  width: fit-content;
+}

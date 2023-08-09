@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .para-style {
+        color: red;
+        padding: 10px;
+        border: 1px dashed blue;
+        border-radius: 20px;
+        width: fit-content;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="header" onmouseover="onMouseOverHandler()">
+      Our first dom manipulation.With black color
+    </h1>
+    <p id="id"></p>
+    <div id="our-div"></div>
+
+    <div id="our-second-div"></div>
+    <button id="btn" onclick="btnClickHandler()">Click Me!</button>
+    <script>
+      const headerElement = document.getElementById("header");
+      const originalTextOfHeaderElement = headerElement.innerText;
+      const btnElement = document.getElementById("btn");
+      const ourDivElement = document.getElementById("our-div");
+      const ourSecondDivElement = document.getElementById("our-second-div");
+
+      const btnClickHandler = () => {
+        const para = document.createElement("p");
+        para.innerText = "Hello World!";
+        para.className = "para-style";
+        const h1 = document.createElement("h1");
+        h1.innerText = "New header";
+        h1.style.color = "red";
+        ourDivElement.appendChild(para);
+        ourSecondDivElement.appendChild(h1);
+      };
+    </script>
+  </body>
+</html>
