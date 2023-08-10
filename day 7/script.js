@@ -11,7 +11,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search-input");
   searchInput.addEventListener("input", () => searchTasks());
 });
+const sortBtn = document.getElementById("sort-btn");
+sortBtn.addEventListener("click", sortTasks);
+function sortTasks() {
+  const taskList = document.getElementById("task-list");
+  const taskItems = [...taskList.children];
 
+  taskItems.sort((a, b) => {
+    const textA = a.querySelector("span").textContent.toLowerCase();
+    const textB = b.querySelector("span").textContent.toLowerCase();
+    return textA.localeCompare(textB);
+  });
+
+  taskItems.forEach((taskItem) => {
+    taskList.appendChild(taskItem);
+  });
+}
 const taskDeleteHandler = (todoItemDiv) => {
   const confirmDelete = confirm("Are you sure you want to delete this task?");
   if (confirmDelete) {
