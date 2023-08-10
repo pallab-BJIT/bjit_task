@@ -104,6 +104,8 @@ function editTask(taskItem, todoValue) {
     taskItem.querySelector("span").textContent = "Title : " + newText;
     taskItem.querySelector(".datetime").textContent =
       "Created At : " + dateTimeString;
+  } else {
+    alert("Please input something");
   }
 }
 
