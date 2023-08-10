@@ -1,20 +1,7 @@
 let nameForm;
 let name = "";
 const deleteAllTaskBtn = document.getElementById("delete-all-btn");
-// console.log(deleteAllTaskBtn);
-deleteAllTaskBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  const allTask = document.querySelector(".task-list-div");
-  console.log(allTask.childElementCount);
-  const confirmDelete = confirm("Are you sure you want to delete all task?");
 
-  if (allTask) {
-    if (confirmDelete) {
-      allTask.remove();
-    }
-  } else {
-  }
-});
 document.addEventListener("DOMContentLoaded", () => {
   const todoForm = document.getElementById("todo-form");
   nameForm = document.getElementById("name-form");
@@ -29,6 +16,23 @@ const taskDeleteHandler = (todoItemDiv) => {
   const confirmDelete = confirm("Are you sure you want to delete this task?");
   if (confirmDelete) {
     todoItemDiv.remove();
+  }
+};
+
+deleteAllTaskBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  deleteAllTaskHandler();
+});
+
+const deleteAllTaskHandler = () => {
+  const allTask = document.querySelector(".task-list-div");
+  console.log(allTask.childElementCount);
+  const confirmDelete = confirm("Are you sure you want to delete all task?");
+
+  if (allTask) {
+    if (confirmDelete) {
+      allTask.remove();
+    }
   }
 };
 
