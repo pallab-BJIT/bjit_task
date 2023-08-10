@@ -29,12 +29,8 @@ const renderProductCard = (products) => {
 };
 
 const onClickHandler = (i) => {
-  const productCard = document.querySelectorAll(".product-card");
-  const clickedProductCard = productCard[i];
-  clickedProductCard.style.background = "rgb(2,0,36)";
-  clickedProductCard.style.background =
-    " linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,17,88,0.4066001400560224) 28%, rgba(0,212,255,1) 100%);";
-  clickedProductCard.style.color = "white";
+  const productId = i + 1;
+  window.location.href = `product.html?productId=${productId}`;
 };
 const getProducts = async () => {
   try {
