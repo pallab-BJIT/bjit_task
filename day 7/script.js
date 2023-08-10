@@ -40,7 +40,7 @@ const createTaskElement = (todoValue, dateTimeString) => {
       <span class="datetime">Author: ${name}</span>
       <div class="action-btn">
       <button class="edit-btn">Edit</button>
-      <button class="delete-btn">Delete</button>
+      <button style="background-color:red" class="delete-btn">Delete</button>
       </div>
     `;
 

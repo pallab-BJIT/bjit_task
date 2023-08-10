@@ -190,4 +190,5 @@ ul {
 #delete-all-btn {
   width: fit-content;
   height: 32px;
+  background-color: red;
 }
